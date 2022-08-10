@@ -273,7 +273,8 @@ open class HiddenSecretsPlugin : Plugin<Project> {
                 var text = secretsKotlin.readText(Charset.defaultCharset())
                 text = text.replace(PACKAGE_PLACEHOLDER, packageName)
                 if (text.contains(keyName)) {
-                    println("⚠️ Method already added in Kotlin !")
+                    println("⚠️ Method already added in Kotlin ! Cancelled !")
+                    return
                 }
                 text = text.dropLast(1)
                 text += CodeGenerator.getKotlinCode(keyName)
