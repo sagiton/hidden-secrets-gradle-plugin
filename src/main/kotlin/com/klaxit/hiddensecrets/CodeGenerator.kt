@@ -1,5 +1,7 @@
 package com.klaxit.hiddensecrets
 
+import com.klaxit.hiddensecrets.Utils.getCppPackageName
+
 /**
  * Helper to generate C++ and Kotlin code
  */
@@ -12,7 +14,7 @@ object CodeGenerator {
 
         return "\nextern \"C\"\n" +
                 "JNIEXPORT jstring JNICALL\n" +
-                "Java_" + Utils.getCppPackageName(packageName) + "_Secrets_get$keyName(\n" +
+                "Java_" + Utils.getCppPackageName(packageName) + "_Secrets_get" + Utils.getCppPackageName(keyName) + "(\n" +
                 "        JNIEnv* pEnv,\n" +
                 "        jobject pThis,\n" +
                 "        jstring packageName) {\n" +
