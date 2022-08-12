@@ -1,3 +1,9 @@
+# 0.2.1
+### Improvements
+* Prevent to add duplication
+* Fix implementation function's naming
+#### Contributors
+@skawue
 # 0.2.0
 ### Improvements
 * Ability to re-generate secrets from .properties file
